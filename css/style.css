@@ -828,105 +828,75 @@ footer strong {
 
 
 /* =================================
-   REDES SOCIALES
+   ICONOS REDES SOCIALES
 ================================= */
 
-.contact-buttons {
-    display: flex;
-
-    justify-content: center;
-
-    flex-wrap: wrap;
-
-    gap: 5px;
-}
-
-
-.social-section {
-    margin-top: 45px;
-
-    text-align: center;
-}
-
-
-.social-section h3 {
-    color: var(--white);
-
-    font-size: 20px;
-
-    margin-bottom: 20px;
-}
-
-
-.social-links {
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    flex-wrap: wrap;
-
-    gap: 15px;
-}
-
-
-.social {
-    display: flex;
-
-    align-items: center;
-
-    gap: 10px;
-
-    padding: 12px 20px;
-
-    border: 1px solid var(--gray-dark);
-
-    border-radius: 40px;
-
-    background: var(--black-card);
-
-    color: var(--white);
-
-    text-decoration: none;
-
-    font-weight: 700;
-
-    transition: 0.3s;
-}
-
-
-.social:hover {
-    transform: translateY(-3px);
-
-    border-color: var(--yellow);
-
-    color: var(--yellow);
-}
-
-
 .social-icon {
-    width: 30px;
-
-    height: 30px;
+    width: 32px;
+    height: 32px;
 
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     border-radius: 50%;
 
-    background: var(--yellow);
-
-    color: #000;
-
-    font-size: 18px;
-
-    font-weight: 900;
+    flex-shrink: 0;
 }
 
+
+.social-icon svg {
+    width: 19px;
+    height: 19px;
+
+    display: block;
+}
+
+
+/* =================================
+   FACEBOOK
+================================= */
+
+.facebook-icon {
+    background: #1877F2;
+}
+
+
+.facebook-icon svg {
+    fill: #FFFFFF;
+}
+
+
+/* =================================
+   INSTAGRAM
+================================= */
+
+.instagram-icon {
+    background: linear-gradient(
+        45deg,
+        #F58529,
+        #DD2A7B,
+        #8134AF,
+        #515BD4
+    );
+}
+
+
+.instagram-icon svg {
+    fill: none;
+
+    stroke: #FFFFFF;
+
+    stroke-width: 2;
+}
+
+
+.instagram-icon svg circle:last-child {
+    fill: #FFFFFF;
+
+    stroke: none;
+}
 
 /* =================================
    REDES - MÓVIL
