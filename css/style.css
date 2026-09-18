@@ -1,7 +1,4 @@
-
-
 :root {
-
     --black: #050505;
     --black-soft: #0D0D0D;
     --black-card: #121212;
@@ -14,6 +11,10 @@
     --gray-dark: #222222;
 }
 
+
+/* =================================
+   RESET
+================================= */
 
 * {
     box-sizing: border-box;
@@ -28,20 +29,10 @@ html {
 
 
 body {
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    background:
-        var(--black);
-
-    color:
-        var(--white);
-
-    line-height:
-        1.6;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--black);
+    color: var(--white);
+    line-height: 1.6;
 }
 
 
@@ -50,76 +41,54 @@ body {
 ================================= */
 
 header {
-
     position: fixed;
-
     top: 0;
     left: 0;
-
     width: 100%;
-
     z-index: 1000;
 
-    background:
-        rgba(5,5,5,.93);
+    background: rgba(5, 5, 5, 0.93);
 
-    backdrop-filter:
-        blur(12px);
+    backdrop-filter: blur(12px);
 
-    border-bottom:
-        1px solid
-        rgba(255,210,28,.15);
+    border-bottom: 1px solid rgba(255, 210, 28, 0.15);
 }
 
 
 nav {
-
     max-width: 1200px;
-
     margin: auto;
 
-    padding:
-        12px 25px;
+    padding: 12px 25px;
 
     display: flex;
-
-    justify-content:
-        space-between;
-
-    align-items:
-        center;
+    justify-content: space-between;
+    align-items: center;
 }
+
 
 /* =================================
    IDENTIDAD / LOGO
 ================================= */
 
 .brand {
-
     display: flex;
-
     align-items: center;
-
     gap: 14px;
 }
 
 
 .brand img {
-
     height: 55px;
-
     width: auto;
-
     display: block;
 }
 
 
 .brand-name {
-
     color: var(--white);
 
     font-size: 17px;
-
     font-weight: 700;
 
     letter-spacing: 0.5px;
@@ -128,65 +97,32 @@ nav {
 }
 
 
-.brand-name::first-line {
-
-    color: var(--white);
-}
-
-
 /* =================================
-   MOBILE
+   MENÚ
 ================================= */
 
-@media(max-width:700px) {
-
-    .brand img {
-        height: 45px;
-    }
-
-    .brand-name {
-        font-size: 14px;
-    }
-
-}
-
-
-.logo img {
-
-    height: 55px;
-
-    width: auto;
-
-    display: block;
+.menu {
+    display: flex;
+    align-items: center;
 }
 
 
 .menu a {
+    color: var(--white);
 
-    color:
-        var(--white);
+    text-decoration: none;
 
-    text-decoration:
-        none;
+    margin-left: 25px;
 
-    margin-left:
-        25px;
+    font-size: 14px;
+    font-weight: 600;
 
-    font-size:
-        14px;
-
-    font-weight:
-        600;
-
-    transition:
-        .3s;
+    transition: 0.3s;
 }
 
 
 .menu a:hover {
-
-    color:
-        var(--yellow);
+    color: var(--yellow);
 }
 
 
@@ -195,112 +131,77 @@ nav {
 ================================= */
 
 .hero {
+    min-height: 100vh;
 
-    min-height:
-        100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    display:
-        flex;
+    text-align: center;
 
-    align-items:
-        center;
+    padding: 120px 20px 70px;
 
-    justify-content:
-        center;
+    position: relative;
 
-    text-align:
-        center;
-
-    padding:
-        120px 20px 70px;
-
-    position:
-        relative;
-
-    overflow:
-        hidden;
-
+    overflow: hidden;
 
     background:
-
         radial-gradient(
             circle at center,
-            rgba(255,210,28,.14),
+            rgba(255, 210, 28, 0.14),
             transparent 45%
         ),
 
         linear-gradient(
-            rgba(0,0,0,.72),
-            rgba(0,0,0,.96)
+            rgba(0, 0, 0, 0.72),
+            rgba(0, 0, 0, 0.96)
         ),
 
-        url("../img/fondo.jpg")
-
-        center / cover
-        no-repeat;
+        url("../img/fondo.jpg") center / cover no-repeat;
 }
 
 
 .hero-content {
+    max-width: 850px;
 
-    max-width:
-        850px;
+    position: relative;
 
-    position:
-        relative;
-
-    z-index:
-        2;
+    z-index: 2;
 }
 
 
 .hero h1 {
+    font-size: clamp(48px, 9vw, 100px);
 
-    font-size:
-        clamp(48px,9vw,100px);
+    line-height: 0.95;
 
-    line-height:
-        .95;
+    font-weight: 900;
 
-    font-weight:
-        900;
+    letter-spacing: -3px;
 
-    letter-spacing:
-        -3px;
-
-    margin-bottom:
-        25px;
+    margin-bottom: 25px;
 }
 
 
 .hero h1 span {
-
-    color:
-        var(--yellow);
+    color: var(--yellow);
 
     text-shadow:
-        0 0 30px
-        rgba(255,210,28,.25);
+        0 0 30px rgba(255, 210, 28, 0.25);
 }
 
 
 .hero p {
+    font-size: 20px;
 
-    font-size:
-        20px;
+    color: #ddd;
 
-    color:
-        #ddd;
-
-    margin-bottom:
-        12px;
+    margin-bottom: 12px;
 }
 
 
 .hero strong {
-
-    color:
-        var(--yellow);
+    color: var(--yellow);
 }
 
 
@@ -309,44 +210,31 @@ nav {
 ================================= */
 
 .btn {
+    display: inline-block;
 
-    display:
-        inline-block;
+    margin-top: 25px;
 
-    margin-top:
-        25px;
+    padding: 15px 32px;
 
-    padding:
-        15px 32px;
+    border-radius: 50px;
 
-    border-radius:
-        50px;
+    background: var(--yellow);
 
-    background:
-        var(--yellow);
+    color: #000;
 
-    color:
-        #000;
+    text-decoration: none;
 
-    text-decoration:
-        none;
+    font-weight: 900;
 
-    font-weight:
-        900;
-
-    transition:
-        .3s;
+    transition: 0.3s;
 }
 
 
 .btn:hover {
-
-    transform:
-        translateY(-3px);
+    transform: translateY(-3px);
 
     box-shadow:
-        0 8px 30px
-        rgba(255,210,28,.25);
+        0 8px 30px rgba(255, 210, 28, 0.25);
 }
 
 
@@ -355,69 +243,48 @@ nav {
 ================================= */
 
 section {
+    max-width: 1200px;
 
-    max-width:
-        1200px;
+    margin: auto;
 
-    margin:
-        auto;
-
-    padding:
-        90px 25px;
+    padding: 90px 25px;
 }
 
 
 .section-title {
+    text-align: center;
 
-    text-align:
-        center;
+    font-size: 40px;
 
-    font-size:
-        40px;
+    line-height: 1.1;
 
-    line-height:
-        1.1;
+    margin-bottom: 15px;
 
-    margin-bottom:
-        15px;
-
-    font-weight:
-        900;
+    font-weight: 900;
 }
 
 
 .section-title::after {
+    content: "";
 
-    content:
-        "";
+    display: block;
 
-    display:
-        block;
+    width: 55px;
 
-    width:
-        55px;
+    height: 3px;
 
-    height:
-        3px;
+    background: var(--yellow);
 
-    background:
-        var(--yellow);
-
-    margin:
-        18px auto 0;
+    margin: 18px auto 0;
 }
 
 
 .section-subtitle {
+    text-align: center;
 
-    text-align:
-        center;
+    color: var(--gray);
 
-    color:
-        var(--gray);
-
-    margin-bottom:
-        45px;
+    margin-bottom: 45px;
 }
 
 
@@ -426,78 +293,56 @@ section {
 ================================= */
 
 .services {
-
-    display:
-        grid;
+    display: grid;
 
     grid-template-columns:
         repeat(
             auto-fit,
-            minmax(220px,1fr)
+            minmax(220px, 1fr)
         );
 
-    gap:
-        20px;
+    gap: 20px;
 }
 
 
 .service {
+    padding: 30px;
 
-    padding:
-        30px;
+    background: var(--black-card);
 
-    background:
-        var(--black-card);
+    border-radius: 15px;
 
-    border-radius:
-        15px;
+    text-align: center;
 
-    text-align:
-        center;
+    border: 1px solid var(--gray-dark);
 
-    border:
-        1px solid
-        var(--gray-dark);
-
-    transition:
-        .3s;
+    transition: 0.3s;
 }
 
 
 .service:hover {
+    transform: translateY(-6px);
 
-    transform:
-        translateY(-6px);
-
-    border-color:
-        var(--gold);
+    border-color: var(--gold);
 }
 
 
 .service .icon {
+    font-size: 42px;
 
-    font-size:
-        42px;
-
-    margin-bottom:
-        15px;
+    margin-bottom: 15px;
 }
 
 
 .service h3 {
-
-    margin-bottom:
-        10px;
+    margin-bottom: 10px;
 }
 
 
 .service p {
+    color: var(--gray);
 
-    color:
-        var(--gray);
-
-    font-size:
-        14px;
+    font-size: 14px;
 }
 
 
@@ -506,111 +351,76 @@ section {
 ================================= */
 
 .slider {
+    position: relative;
 
-    position:
-        relative;
+    max-width: 1000px;
 
-    max-width:
-        1000px;
+    height: 500px;
 
-    height:
-        500px;
+    margin: auto;
 
-    margin:
-        auto;
+    overflow: hidden;
 
-    overflow:
-        hidden;
+    border-radius: 18px;
 
-    border-radius:
-        18px;
+    background: var(--black-soft);
 
-    background:
-        var(--black-soft);
-
-    border:
-        1px solid
-        rgba(255,210,28,.15);
+    border: 1px solid rgba(255, 210, 28, 0.15);
 }
 
 
 .slide {
+    position: absolute;
 
-    position:
-        absolute;
+    width: 100%;
+    height: 100%;
 
-    width:
-        100%;
+    opacity: 0;
 
-    height:
-        100%;
-
-    opacity:
-        0;
-
-    transition:
-        opacity .8s ease;
+    transition: opacity 0.8s ease;
 }
 
 
 .slide.active {
-
-    opacity:
-        1;
+    opacity: 1;
 }
 
 
 .slide img {
+    width: 100%;
+    height: 100%;
 
-    width:
-        100%;
-
-    height:
-        100%;
-
-    object-fit:
-        cover;
+    object-fit: cover;
 }
 
 
+/* =================================
+   FLECHAS SLIDER
+================================= */
+
 .arrow {
+    position: absolute;
 
-    position:
-        absolute;
+    top: 50%;
 
-    top:
-        50%;
+    transform: translateY(-50%);
 
-    transform:
-        translateY(-50%);
+    width: 45px;
+    height: 45px;
 
-    width:
-        45px;
+    border-radius: 50%;
 
-    height:
-        45px;
+    border: 1px solid rgba(255, 210, 28, 0.5);
 
-    border-radius:
-        50%;
+    background: rgba(0, 0, 0, 0.65);
 
-    border:
-        1px solid
-        rgba(255,210,28,.5);
+    color: var(--yellow);
 
-    background:
-        rgba(0,0,0,.65);
+    font-size: 28px;
 
-    color:
-        var(--yellow);
+    cursor: pointer;
 
-    font-size:
-        28px;
-
-    cursor:
-        pointer;
-
-    z-index:
-        10;
+    z-index: 10;
 }
 
 
@@ -624,60 +434,45 @@ section {
 }
 
 
+/* =================================
+   PUNTOS SLIDER
+================================= */
+
 .dots {
+    position: absolute;
 
-    position:
-        absolute;
+    bottom: 15px;
 
-    bottom:
-        15px;
+    left: 50%;
 
-    left:
-        50%;
+    transform: translateX(-50%);
 
-    transform:
-        translateX(-50%);
+    display: flex;
 
-    display:
-        flex;
+    gap: 8px;
 
-    gap:
-        8px;
-
-    z-index:
-        20;
+    z-index: 20;
 }
 
 
 .dot {
+    width: 9px;
+    height: 9px;
 
-    width:
-        9px;
+    border-radius: 50%;
 
-    height:
-        9px;
+    background: white;
 
-    border-radius:
-        50%;
+    opacity: 0.35;
 
-    background:
-        white;
-
-    opacity:
-        .35;
-
-    cursor:
-        pointer;
+    cursor: pointer;
 }
 
 
 .dot.active {
+    opacity: 1;
 
-    opacity:
-        1;
-
-    background:
-        var(--yellow);
+    background: var(--yellow);
 }
 
 
@@ -686,85 +481,61 @@ section {
 ================================= */
 
 .events {
-
-    display:
-        grid;
+    display: grid;
 
     grid-template-columns:
         repeat(
             auto-fit,
-            minmax(250px,1fr)
+            minmax(250px, 1fr)
         );
 
-    gap:
-        20px;
+    gap: 20px;
 }
 
 
 .event {
+    background: var(--black-card);
 
-    background:
-        var(--black-card);
+    border-radius: 15px;
 
-    border-radius:
-        15px;
+    overflow: hidden;
 
-    overflow:
-        hidden;
+    border: 1px solid var(--gray-dark);
 
-    border:
-        1px solid
-        var(--gray-dark);
-
-    transition:
-        .3s;
+    transition: 0.3s;
 }
 
 
 .event:hover {
+    transform: translateY(-5px);
 
-    transform:
-        translateY(-5px);
-
-    border-color:
-        var(--gold);
+    border-color: var(--gold);
 }
 
 
 .event img {
+    width: 100%;
 
-    width:
-        100%;
+    height: 190px;
 
-    height:
-        190px;
-
-    object-fit:
-        cover;
+    object-fit: cover;
 }
 
 
 .event-content {
-
-    padding:
-        20px;
+    padding: 20px;
 }
 
 
 .event h3 {
-
-    margin-bottom:
-        8px;
+    margin-bottom: 8px;
 }
 
 
 .event p {
+    color: var(--gray);
 
-    color:
-        var(--gray);
-
-    font-size:
-        14px;
+    font-size: 14px;
 }
 
 
@@ -773,289 +544,201 @@ section {
 ================================= */
 
 .calendar-container {
+    max-width: 850px;
 
-    max-width:
-        850px;
+    margin: auto;
 
-    margin:
-        auto;
+    background: var(--black-card);
 
-    background:
-        var(--black-card);
+    border: 1px solid var(--gray-dark);
 
-    border:
-        1px solid
-        var(--gray-dark);
+    border-radius: 18px;
 
-    border-radius:
-        18px;
-
-    padding:
-        25px;
+    padding: 25px;
 }
 
 
 .calendar-header {
+    display: flex;
 
-    display:
-        flex;
+    align-items: center;
 
-    align-items:
-        center;
+    justify-content: space-between;
 
-    justify-content:
-        space-between;
-
-    margin-bottom:
-        25px;
+    margin-bottom: 25px;
 }
 
 
 .calendar-header h3 {
+    font-size: 25px;
 
-    font-size:
-        25px;
-
-    color:
-        var(--yellow);
+    color: var(--yellow);
 }
 
 
 .calendar-header button {
+    width: 42px;
+    height: 42px;
 
-    width:
-        42px;
+    border: 1px solid var(--gold);
 
-    height:
-        42px;
+    border-radius: 50%;
 
-    border:
-        1px solid
-        var(--gold);
+    background: transparent;
 
-    border-radius:
-        50%;
+    color: var(--yellow);
 
-    background:
-        transparent;
+    font-size: 25px;
 
-    color:
-        var(--yellow);
-
-    font-size:
-        25px;
-
-    cursor:
-        pointer;
+    cursor: pointer;
 }
 
 
 .calendar-weekdays {
-
-    display:
-        grid;
+    display: grid;
 
     grid-template-columns:
-        repeat(7,1fr);
+        repeat(7, 1fr);
 
-    gap:
-        6px;
+    gap: 6px;
 
-    margin-bottom:
-        6px;
+    margin-bottom: 6px;
 
-    text-align:
-        center;
+    text-align: center;
 
-    color:
-        var(--gray);
+    color: var(--gray);
 
-    font-size:
-        12px;
+    font-size: 12px;
 
-    font-weight:
-        bold;
+    font-weight: bold;
 }
 
 
 .calendar {
-
-    display:
-        grid;
+    display: grid;
 
     grid-template-columns:
-        repeat(7,1fr);
+        repeat(7, 1fr);
 
-    gap:
-        6px;
+    gap: 6px;
 }
 
 
 .calendar-day {
+    min-height: 70px;
 
-    min-height:
-        70px;
+    display: flex;
 
-    display:
-        flex;
+    align-items: center;
 
-    align-items:
-        center;
+    justify-content: center;
 
-    justify-content:
-        center;
+    border: 1px solid var(--gray-dark);
 
-    border:
-        1px solid
-        var(--gray-dark);
+    border-radius: 8px;
 
-    border-radius:
-        8px;
+    background: #0b0b0b;
 
-    background:
-        #0b0b0b;
+    font-weight: bold;
 
-    font-weight:
-        bold;
-
-    transition:
-        .2s;
+    transition: 0.2s;
 }
 
 
 .calendar-day.empty {
+    background: transparent;
 
-    background:
-        transparent;
-
-    border:
-        none;
+    border: none;
 }
 
 
 .calendar-day.available {
+    color: var(--yellow);
 
-    color:
-        var(--yellow);
-
-    cursor:
-        pointer;
+    cursor: pointer;
 }
 
 
 .calendar-day.available:hover {
+    background: rgba(255, 210, 28, 0.12);
 
-    background:
-        rgba(255,210,28,.12);
-
-    border-color:
-        var(--yellow);
+    border-color: var(--yellow);
 }
 
 
 .calendar-day.occupied {
+    background: #301414;
 
-    background:
-        #301414;
+    color: #ff6b6b;
 
-    color:
-        #ff6b6b;
+    border-color: #713030;
 
-    border-color:
-        #713030;
-
-    text-decoration:
-        line-through;
+    text-decoration: line-through;
 }
 
 
 .calendar-day.today {
-
     box-shadow:
-        inset 0 -3px 0
-        var(--yellow);
+        inset 0 -3px 0 var(--yellow);
 }
 
 
+/* =================================
+   LEYENDA CALENDARIO
+================================= */
+
 .calendar-legend {
+    display: flex;
 
-    display:
-        flex;
+    justify-content: center;
 
-    justify-content:
-        center;
+    gap: 25px;
 
-    gap:
-        25px;
+    margin-top: 25px;
 
-    margin-top:
-        25px;
+    color: var(--gray);
 
-    color:
-        var(--gray);
-
-    font-size:
-        13px;
+    font-size: 13px;
 }
 
 
 .legend {
+    display: inline-block;
 
-    display:
-        inline-block;
+    width: 12px;
+    height: 12px;
 
-    width:
-        12px;
+    border-radius: 3px;
 
-    height:
-        12px;
-
-    border-radius:
-        3px;
-
-    margin-right:
-        5px;
+    margin-right: 5px;
 }
 
 
 .legend.available {
-
-    background:
-        var(--yellow);
+    background: var(--yellow);
 }
 
 
 .legend.occupied {
-
-    background:
-        #713030;
+    background: #713030;
 }
 
 
 .legend.today {
+    background: transparent;
 
-    background:
-        transparent;
-
-    border:
-        2px solid
-        var(--yellow);
+    border: 2px solid var(--yellow);
 }
 
 
 .calendar-note {
+    text-align: center;
 
-    text-align:
-        center;
+    color: var(--gray);
 
-    color:
-        var(--gray);
+    margin-top: 20px;
 
-    margin-top:
-        20px;
-
-    font-size:
-        14px;
+    font-size: 14px;
 }
 
 
@@ -1064,84 +747,60 @@ section {
 ================================= */
 
 .contact {
+    max-width: none;
 
-    max-width:
-        none;
+    text-align: center;
 
-    text-align:
-        center;
-
-    padding:
-        110px 25px;
+    padding: 110px 25px;
 
     background:
-
         radial-gradient(
             circle at center,
-            rgba(255,210,28,.10),
+            rgba(255, 210, 28, 0.10),
             transparent 55%
         );
 }
 
 
 .contact h2 {
+    font-size: clamp(35px, 6vw, 55px);
 
-    font-size:
-        clamp(35px,6vw,55px);
+    margin-bottom: 20px;
 
-    margin-bottom:
-        20px;
-
-    font-weight:
-        900;
+    font-weight: 900;
 }
 
 
 .contact p {
+    color: var(--gray);
 
-    color:
-        var(--gray);
-
-    margin-bottom:
-        25px;
+    margin-bottom: 25px;
 }
 
 
 .whatsapp {
+    display: inline-block;
 
-    display:
-        inline-block;
+    margin: 8px;
 
-    margin:
-        8px;
+    padding: 14px 24px;
 
-    padding:
-        14px 24px;
+    border-radius: 40px;
 
-    border-radius:
-        40px;
+    background: var(--yellow);
 
-    background:
-        var(--yellow);
+    color: #000;
 
-    color:
-        #000;
+    text-decoration: none;
 
-    text-decoration:
-        none;
+    font-weight: 900;
 
-    font-weight:
-        900;
-
-    transition:
-        .3s;
+    transition: 0.3s;
 }
 
 
 .whatsapp:hover {
-
-    transform:
-        translateY(-3px);
+    transform: translateY(-3px);
 }
 
 
@@ -1150,87 +809,95 @@ section {
 ================================= */
 
 footer {
+    text-align: center;
 
-    text-align:
-        center;
+    padding: 35px;
 
-    padding:
-        35px;
+    border-top: 1px solid var(--gray-dark);
 
-    border-top:
-        1px solid
-        var(--gray-dark);
+    color: #777;
 
-    color:
-        #777;
-
-    background:
-        #030303;
+    background: #030303;
 }
 
 
 footer strong {
-
-    color:
-        var(--yellow);
+    color: var(--yellow);
 }
 
 
 /* =================================
-   MOBILE
+   RESPONSIVE / MÓVIL
 ================================= */
 
-@media(max-width:700px) {
+@media (max-width: 700px) {
+
+    nav {
+        padding: 10px 15px;
+    }
+
+
+    .brand {
+        gap: 10px;
+    }
+
+
+    .brand img {
+        height: 45px;
+    }
+
+
+    .brand-name {
+        font-size: 14px;
+    }
+
 
     .menu {
         display: none;
     }
 
 
-    .logo img {
-        height: 48px;
-    }
-
-
     .slider {
-        height:
-            350px;
+        height: 350px;
     }
 
 
     .hero p {
-        font-size:
-            17px;
+        font-size: 17px;
     }
 
 
     section {
-        padding:
-            70px 18px;
+        padding: 70px 18px;
+    }
+
+
+    .section-title {
+        font-size: 32px;
     }
 
 
     .calendar-container {
-        padding:
-            12px;
+        padding: 12px;
     }
 
 
     .calendar-day {
-        min-height:
-            50px;
+        min-height: 50px;
 
-        font-size:
-            14px;
+        font-size: 14px;
     }
 
 
     .calendar-legend {
-        gap:
-            10px;
+        gap: 10px;
 
-        flex-wrap:
-            wrap;
+        flex-wrap: wrap;
+    }
+
+
+    .calendar-header h3 {
+        font-size: 20px;
     }
 
 }
