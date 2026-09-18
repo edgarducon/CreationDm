@@ -14,888 +14,7 @@
 
     <title>Creation Disco Móvil | DJ Edgar Cárdenas</title>
 
-    <style>
-
-        /* =========================================
-           CREATION DISCO MÓVIL
-           IDENTIDAD VISUAL
-           Negro + Amarillo/Dorado + Blanco
-        ========================================= */
-
-        :root {
-            --black: #050505;
-            --black-soft: #0D0D0D;
-            --black-card: #121212;
-
-            --yellow: #FFD21C;
-            --gold: #C99A00;
-
-            --white: #FFFFFF;
-            --gray: #A5A5A5;
-            --gray-dark: #222222;
-        }
-
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-
-        body {
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            background: var(--black);
-
-            color: var(--white);
-
-            line-height: 1.6;
-        }
-
-
-        /* =========================================
-           HEADER
-        ========================================= */
-
-        header {
-
-            position: fixed;
-
-            top: 0;
-            left: 0;
-
-            width: 100%;
-
-            z-index: 1000;
-
-            background:
-                rgba(5, 5, 5, 0.92);
-
-            backdrop-filter: blur(12px);
-
-            border-bottom:
-                1px solid
-                rgba(255, 210, 28, 0.15);
-        }
-
-
-        nav {
-
-            max-width: 1200px;
-
-            margin: auto;
-
-            padding: 17px 25px;
-
-            display: flex;
-
-            justify-content: space-between;
-
-            align-items: center;
-        }
-
-
-        .logo {
-
-            font-size: 21px;
-
-            font-weight: 900;
-
-            letter-spacing: 2px;
-
-            color: var(--white);
-        }
-
-
-        .logo span {
-
-            color: var(--yellow);
-        }
-
-
-        nav a {
-
-            color: var(--white);
-
-            text-decoration: none;
-
-            margin-left: 25px;
-
-            font-size: 14px;
-
-            font-weight: 600;
-
-            transition: 0.3s;
-        }
-
-
-        nav a:hover {
-
-            color: var(--yellow);
-        }
-
-
-        /* =========================================
-           HERO
-        ========================================= */
-
-        .hero {
-
-            min-height: 100vh;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            text-align: center;
-
-            padding:
-                120px 20px 70px;
-
-            position: relative;
-
-            overflow: hidden;
-
-
-            background:
-
-                radial-gradient(
-                    circle at center,
-                    rgba(255, 210, 28, 0.14),
-                    transparent 45%
-                ),
-
-                linear-gradient(
-                    rgba(0,0,0,0.72),
-                    rgba(0,0,0,0.96)
-                ),
-
-                url("img/fondo.jpg")
-
-                center / cover
-                no-repeat;
-        }
-
-
-        /* Luz decorativa */
-
-        .hero::before {
-
-            content: "";
-
-            position: absolute;
-
-            width: 500px;
-
-            height: 500px;
-
-            border-radius: 50%;
-
-            background:
-                rgba(255,210,28,0.08);
-
-            filter: blur(100px);
-
-            pointer-events: none;
-        }
-
-
-        .hero-content {
-
-            max-width: 850px;
-
-            position: relative;
-
-            z-index: 2;
-        }
-
-
-        .hero h1 {
-
-            font-size:
-                clamp(48px, 9vw, 100px);
-
-            line-height: 0.95;
-
-            font-weight: 900;
-
-            letter-spacing: -3px;
-
-            margin-bottom: 25px;
-        }
-
-
-        .hero h1 span {
-
-            color: var(--yellow);
-
-            text-shadow:
-                0 0 30px
-                rgba(255,210,28,0.25);
-        }
-
-
-        .hero p {
-
-            font-size: 20px;
-
-            color: #ddd;
-
-            margin-bottom: 12px;
-        }
-
-
-        .hero strong {
-
-            color: var(--yellow);
-        }
-
-
-        /* =========================================
-           BOTONES
-        ========================================= */
-
-        .btn {
-
-            display: inline-block;
-
-            margin-top: 25px;
-
-            padding:
-                15px 32px;
-
-            border-radius: 50px;
-
-            background:
-                var(--yellow);
-
-            color:
-                #000;
-
-            text-decoration: none;
-
-            font-weight: 900;
-
-            letter-spacing: 0.5px;
-
-            transition:
-                transform 0.3s,
-                box-shadow 0.3s;
-        }
-
-
-        .btn:hover {
-
-            transform:
-                translateY(-3px);
-
-            box-shadow:
-                0 8px 30px
-                rgba(255,210,28,0.25);
-        }
-
-
-        /* =========================================
-           SECCIONES
-        ========================================= */
-
-        section {
-
-            max-width: 1200px;
-
-            margin: auto;
-
-            padding:
-                90px 25px;
-        }
-
-
-        .section-title {
-
-            text-align: center;
-
-            font-size: 40px;
-
-            line-height: 1.1;
-
-            margin-bottom: 15px;
-
-            font-weight: 900;
-        }
-
-
-        .section-title::after {
-
-            content: "";
-
-            display: block;
-
-            width: 55px;
-
-            height: 3px;
-
-            background:
-                var(--yellow);
-
-            margin:
-                18px auto 0;
-        }
-
-
-        .section-subtitle {
-
-            text-align: center;
-
-            color:
-                var(--gray);
-
-            margin-bottom: 45px;
-        }
-
-
-        /* =========================================
-           SERVICIOS
-        ========================================= */
-
-        .services {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(
-                    auto-fit,
-                    minmax(220px, 1fr)
-                );
-
-            gap: 20px;
-        }
-
-
-        .service {
-
-            padding: 30px;
-
-            background:
-                var(--black-card);
-
-            border-radius: 15px;
-
-            text-align: center;
-
-            border:
-                1px solid
-                var(--gray-dark);
-
-            transition:
-                transform 0.3s,
-                border-color 0.3s;
-        }
-
-
-        .service:hover {
-
-            transform:
-                translateY(-6px);
-
-            border-color:
-                var(--gold);
-        }
-
-
-        .service .icon {
-
-            font-size: 42px;
-
-            margin-bottom: 15px;
-        }
-
-
-        .service h3 {
-
-            margin-bottom: 10px;
-
-            color:
-                var(--white);
-        }
-
-
-        .service p {
-
-            color:
-                var(--gray);
-
-            font-size: 14px;
-        }
-
-
-        /* =========================================
-           SLIDER
-        ========================================= */
-
-        .slider {
-
-            position: relative;
-
-            max-width: 1000px;
-
-            height: 500px;
-
-            margin: auto;
-
-            overflow: hidden;
-
-            border-radius: 18px;
-
-            background:
-                var(--black-soft);
-
-            border:
-                1px solid
-                rgba(255,210,28,0.15);
-
-            box-shadow:
-                0 15px 60px
-                rgba(0,0,0,0.5);
-        }
-
-
-        .slide {
-
-            position: absolute;
-
-            width: 100%;
-            height: 100%;
-
-            opacity: 0;
-
-            transition:
-                opacity 0.8s ease;
-        }
-
-
-        .slide.active {
-
-            opacity: 1;
-        }
-
-
-        .slide img {
-
-            width: 100%;
-            height: 100%;
-
-            object-fit: cover;
-        }
-
-
-        .caption {
-
-            position: absolute;
-
-            bottom: 0;
-
-            width: 100%;
-
-            padding:
-                50px 25px 25px;
-
-            background:
-                linear-gradient(
-                    transparent,
-                    rgba(0,0,0,0.9)
-                );
-        }
-
-
-        .caption h3 {
-
-            font-size: 25px;
-        }
-
-
-        .arrow {
-
-            position: absolute;
-
-            top: 50%;
-
-            transform:
-                translateY(-50%);
-
-            width: 45px;
-
-            height: 45px;
-
-            border-radius: 50%;
-
-            border:
-                1px solid
-                rgba(255,210,28,0.5);
-
-            background:
-                rgba(0,0,0,0.65);
-
-            color:
-                var(--yellow);
-
-            font-size: 28px;
-
-            cursor: pointer;
-
-            z-index: 10;
-        }
-
-
-        .prev {
-            left: 15px;
-        }
-
-
-        .next {
-            right: 15px;
-        }
-
-
-        .dots {
-
-            position: absolute;
-
-            bottom: 15px;
-
-            left: 50%;
-
-            transform:
-                translateX(-50%);
-
-            display: flex;
-
-            gap: 8px;
-
-            z-index: 20;
-        }
-
-
-        .dot {
-
-            width: 9px;
-
-            height: 9px;
-
-            border-radius: 50%;
-
-            background:
-                white;
-
-            opacity: 0.35;
-
-            cursor: pointer;
-        }
-
-
-        .dot.active {
-
-            opacity: 1;
-
-            background:
-                var(--yellow);
-
-            box-shadow:
-                0 0 10px
-                rgba(255,210,28,0.5);
-        }
-
-
-        /* =========================================
-           EVENTOS
-        ========================================= */
-
-        .events {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(
-                    auto-fit,
-                    minmax(250px, 1fr)
-                );
-
-            gap: 20px;
-        }
-
-
-        .event {
-
-            background:
-                var(--black-card);
-
-            border-radius: 15px;
-
-            overflow: hidden;
-
-            border:
-                1px solid
-                var(--gray-dark);
-
-            transition:
-                transform 0.3s,
-                border-color 0.3s;
-        }
-
-
-        .event:hover {
-
-            transform:
-                translateY(-5px);
-
-            border-color:
-                var(--gold);
-        }
-
-
-        .event img {
-
-            width: 100%;
-
-            height: 180px;
-
-            object-fit: cover;
-        }
-
-
-        .event-content {
-
-            padding: 20px;
-        }
-
-
-        .event h3 {
-
-            margin-bottom: 8px;
-        }
-
-
-        .event p {
-
-            color:
-                var(--gray);
-
-            font-size: 14px;
-        }
-
-
-        /* =========================================
-           DISPONIBILIDAD
-        ========================================= */
-
-        .calendar {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(
-                    auto-fit,
-                    minmax(220px, 1fr)
-                );
-
-            gap: 15px;
-        }
-
-
-        .date {
-
-            padding: 22px;
-
-            background:
-                var(--black-card);
-
-            border-radius: 12px;
-
-            border-left:
-                4px solid
-                var(--yellow);
-
-            transition:
-                transform 0.3s;
-        }
-
-
-        .date:hover {
-
-            transform:
-                translateX(4px);
-        }
-
-
-        .date strong {
-
-            display: block;
-
-            font-size: 20px;
-
-            margin-bottom: 5px;
-        }
-
-
-        .available {
-
-            color:
-                var(--yellow);
-
-            font-weight: bold;
-        }
-
-
-        /* =========================================
-           CONTACTO
-        ========================================= */
-
-        .contact {
-
-            max-width: none;
-
-            text-align: center;
-
-            padding:
-                110px 25px;
-
-            background:
-
-                radial-gradient(
-                    circle at center,
-                    rgba(255,210,28,0.10),
-                    transparent 55%
-                );
-        }
-
-
-        .contact h2 {
-
-            font-size:
-                clamp(35px, 6vw, 55px);
-
-            margin-bottom: 20px;
-
-            font-weight: 900;
-        }
-
-
-        .contact p {
-
-            color:
-                var(--gray);
-
-            margin-bottom: 25px;
-        }
-
-
-        .whatsapp {
-
-            display: inline-block;
-
-            margin: 8px;
-
-            padding:
-                14px 24px;
-
-            border-radius: 40px;
-
-            background:
-                var(--yellow);
-
-            color:
-                #000;
-
-            text-decoration: none;
-
-            font-weight: 900;
-
-            transition:
-                transform 0.3s;
-        }
-
-
-        .whatsapp:hover {
-
-            transform:
-                translateY(-3px);
-        }
-
-
-        /* =========================================
-           FOOTER
-        ========================================= */
-
-        footer {
-
-            text-align: center;
-
-            padding: 35px;
-
-            border-top:
-                1px solid
-                var(--gray-dark);
-
-            color:
-                #777;
-
-            background:
-                #030303;
-        }
-
-
-        footer strong {
-
-            color:
-                var(--yellow);
-        }
-
-
-        /* =========================================
-           MOBILE
-        ========================================= */
-
-        @media(max-width: 700px) {
-
-            nav a {
-                display: none;
-            }
-
-
-            .slider {
-                height: 350px;
-            }
-
-
-            .hero p {
-                font-size: 17px;
-            }
-
-
-            .hero h1 {
-                letter-spacing: -2px;
-            }
-
-
-            section {
-                padding:
-                    70px 18px;
-            }
-
-        }
-
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -903,39 +22,26 @@
 <body>
 
 
-<!-- =========================================
-     HEADER
-========================================= -->
-
 <header>
 
     <nav>
 
         <div class="logo">
-            CREATION <span>DJ EDGAR CARDENAS</span>
+            <img src="img/logo.png"
+                 alt="Creation Disco Móvil">
         </div>
 
-        <div>
+        <div class="menu">
 
-            <a href="#inicio">
-                Inicio
-            </a>
+            <a href="#inicio">Inicio</a>
 
-            <a href="#servicios">
-                Servicios
-            </a>
+            <a href="#servicios">Servicios</a>
 
-            <a href="#eventos">
-                Eventos
-            </a>
+            <a href="#eventos">Eventos</a>
 
-            <a href="#fechas">
-                Disponibilidad
-            </a>
+            <a href="#fechas">Disponibilidad</a>
 
-            <a href="#contacto">
-                Contacto
-            </a>
+            <a href="#contacto">Contacto</a>
 
         </div>
 
@@ -944,43 +50,35 @@
 </header>
 
 
-<!-- =========================================
+<!-- ==============================
      HERO
-========================================= -->
+================================ -->
 
-<div class="hero" id="inicio">
+<section class="hero" id="inicio">
 
     <div class="hero-content">
 
         <h1>
-
             CREATION
-
             <br>
-
             <span>DISCO MÓVIL</span>
-
         </h1>
-
 
         <p>
             DJ • Sonido • Luces • Animación
         </p>
-
 
         <p>
             No alquilamos sonido.
             <br>
 
             <strong>
-                Vendemos momentos que duran para siempre.
+                Vendemos momentos.
             </strong>
         </p>
 
-
-        <a
-            href="#contacto"
-            class="btn">
+        <a href="#contacto"
+           class="btn">
 
             PLANEA TU EVENTO
 
@@ -988,12 +86,12 @@
 
     </div>
 
-</div>
+</section>
 
 
-<!-- =========================================
+<!-- ==============================
      SERVICIOS
-========================================= -->
+================================ -->
 
 <section id="servicios">
 
@@ -1011,9 +109,7 @@
 
         <div class="service">
 
-            <div class="icon">
-                🎧
-            </div>
+            <div class="icon">🎧</div>
 
             <h3>
                 DJ Profesional
@@ -1030,9 +126,7 @@
 
         <div class="service">
 
-            <div class="icon">
-                🔊
-            </div>
+            <div class="icon">🔊</div>
 
             <h3>
                 Sonido
@@ -1048,9 +142,7 @@
 
         <div class="service">
 
-            <div class="icon">
-                💡
-            </div>
+            <div class="icon">💡</div>
 
             <h3>
                 Iluminación
@@ -1066,9 +158,7 @@
 
         <div class="service">
 
-            <div class="icon">
-                🎤
-            </div>
+            <div class="icon">🎤</div>
 
             <h3>
                 Animación
@@ -1086,9 +176,9 @@
 </section>
 
 
-<!-- =========================================
+<!-- ==============================
      GALERÍA
-========================================= -->
+================================ -->
 
 <section>
 
@@ -1103,91 +193,83 @@
 
     <div class="slider">
 
+        <div class="slides">
 
-        <div class="slide active">
 
-            <img
-                src="img/evento-1.jpg"
-                alt="Evento Creation Disco Móvil">
+            <div class="slide active">
 
-            <div class="caption">
+                <img src="img/evento-1.jpg"
+                     alt="Evento Creation Disco Móvil">
 
-                <h3>
-                    La música comienza...
-                </h3>
+            </div>
+
+
+            <div class="slide">
+
+                <img src="img/evento-2.jpg"
+                     alt="Evento Creation Disco Móvil">
+
+            </div>
+
+
+            <div class="slide">
+
+                <img src="img/evento-3.jpg"
+                     alt="Evento Creation Disco Móvil">
+
+            </div>
+
+
+            <div class="slide">
+
+                <img src="img/evento-4.jpg"
+                     alt="Evento Creation Disco Móvil">
+
+            </div>
+
+
+            <div class="slide">
+
+                <img src="img/evento-5.jpg"
+                     alt="Evento Creation Disco Móvil">
 
             </div>
 
         </div>
 
 
-        <div class="slide">
-
-            <img
-                src="img/evento-2.jpg"
-                alt="Evento Creation Disco Móvil">
-
-            <div class="caption">
-
-                <h3>
-                    Y la fiesta continúa
-                </h3>
-
-            </div>
-
-        </div>
-
-
-        <div class="slide">
-
-            <img
-                src="img/evento-3.jpg"
-                alt="Evento Creation Disco Móvil">
-
-            <div class="caption">
-
-                <h3>
-                    Momentos que quedan
-                </h3>
-
-            </div>
-
-        </div>
-
-
-        <button
-            class="arrow prev"
-            onclick="changeSlide(-1)">
-
+        <button class="arrow prev"
+                onclick="changeSlide(-1)">
             ‹
-
         </button>
 
 
-        <button
-            class="arrow next"
-            onclick="changeSlide(1)">
-
+        <button class="arrow next"
+                onclick="changeSlide(1)">
             ›
-
         </button>
 
 
         <div class="dots">
 
-            <span
-                class="dot active"
-                onclick="goToSlide(0)">
+            <span class="dot active"
+                  onclick="goToSlide(0)">
             </span>
 
-            <span
-                class="dot"
-                onclick="goToSlide(1)">
+            <span class="dot"
+                  onclick="goToSlide(1)">
             </span>
 
-            <span
-                class="dot"
-                onclick="goToSlide(2)">
+            <span class="dot"
+                  onclick="goToSlide(2)">
+            </span>
+
+            <span class="dot"
+                  onclick="goToSlide(3)">
+            </span>
+
+            <span class="dot"
+                  onclick="goToSlide(4)">
             </span>
 
         </div>
@@ -1197,9 +279,9 @@
 </section>
 
 
-<!-- =========================================
+<!-- ==============================
      EVENTOS
-========================================= -->
+================================ -->
 
 <section id="eventos">
 
@@ -1217,9 +299,8 @@
 
         <div class="event">
 
-            <img
-                src="img/evento-4.jpg"
-                alt="Cumpleaños">
+            <img src="img/cumpleaños.jpg"
+                 alt="Cumpleaños">
 
             <div class="event-content">
 
@@ -1239,9 +320,8 @@
 
         <div class="event">
 
-            <img
-                src="img/evento-5.jpg"
-                alt="Promoción">
+            <img src="img/proms.jpg"
+                 alt="Promociones">
 
             <div class="event-content">
 
@@ -1250,8 +330,8 @@
                 </h3>
 
                 <p>
-                    La fiesta que marca el
-                    final de una etapa.
+                    La fiesta que marca
+                    el final de una etapa.
                 </p>
 
             </div>
@@ -1261,9 +341,8 @@
 
         <div class="event">
 
-            <img
-                src="img/evento-1.jpg"
-                alt="Evento empresarial">
+            <img src="img/empresariales.jpg"
+                 alt="Eventos empresariales">
 
             <div class="event-content">
 
@@ -1286,14 +365,14 @@
 </section>
 
 
-<!-- =========================================
+<!-- ==============================
      DISPONIBILIDAD
-========================================= -->
+================================ -->
 
 <section id="fechas">
 
     <h2 class="section-title">
-        Próximas fechas
+        Disponibilidad
     </h2>
 
     <p class="section-subtitle">
@@ -1301,73 +380,81 @@
     </p>
 
 
-    <div class="calendar">
+    <div class="calendar-container">
 
+        <div class="calendar-header">
 
-        <div class="date">
+            <button onclick="previousMonth()">
+                ‹
+            </button>
 
-            <strong>
-                10 OCT
-            </strong>
+            <h3 id="calendarTitle">
+                Octubre 2026
+            </h3>
 
-            <span class="available">
-                ✓ Disponible
-            </span>
-
-        </div>
-
-
-        <div class="date">
-
-            <strong>
-                17 OCT
-            </strong>
-
-            <span class="available">
-                ✓ Disponible
-            </span>
+            <button onclick="nextMonth()">
+                ›
+            </button>
 
         </div>
 
 
-        <div class="date">
+        <div class="calendar-weekdays">
 
-            <strong>
-                24 OCT
-            </strong>
-
-            <span class="available">
-                ✓ Disponible
-            </span>
-
-        </div>
-
-
-        <div class="date">
-
-            <strong>
-                31 OCT
-            </strong>
-
-            <span class="available">
-                ✓ Disponible
-            </span>
+            <div>LUN</div>
+            <div>MAR</div>
+            <div>MIÉ</div>
+            <div>JUE</div>
+            <div>VIE</div>
+            <div>SÁB</div>
+            <div>DOM</div>
 
         </div>
 
+
+        <div id="calendar"
+             class="calendar">
+        </div>
+
+
+        <div class="calendar-legend">
+
+            <div>
+                <span class="legend available"></span>
+                Disponible
+            </div>
+
+            <div>
+                <span class="legend occupied"></span>
+                Ocupado
+            </div>
+
+            <div>
+                <span class="legend today"></span>
+                Hoy
+            </div>
+
+        </div>
 
     </div>
+
+
+    <p class="calendar-note">
+
+        Las fechas se actualizan constantemente.
+        Para reservar una fecha, contáctanos por WhatsApp.
+
+    </p>
 
 </section>
 
 
-<!-- =========================================
+<!-- ==============================
      CONTACTO
-========================================= -->
+================================ -->
 
-<section
-    id="contacto"
-    class="contact">
+<section id="contacto"
+         class="contact">
 
     <h2>
         ¿Planeamos tu fiesta?
@@ -1380,10 +467,9 @@
     </p>
 
 
-    <a
-        class="whatsapp"
-        href="https://wa.me/573125713865"
-        target="_blank">
+    <a class="whatsapp"
+       href="https://wa.me/573125713865"
+       target="_blank">
 
         WhatsApp
         312 571 3865
@@ -1391,10 +477,9 @@
     </a>
 
 
-    <a
-        class="whatsapp"
-        href="https://wa.me/573184472253"
-        target="_blank">
+    <a class="whatsapp"
+       href="https://wa.me/573184472253"
+       target="_blank">
 
         WhatsApp
         318 447 2253
@@ -1403,10 +488,6 @@
 
 </section>
 
-
-<!-- =========================================
-     FOOTER
-========================================= -->
 
 <footer>
 
@@ -1422,98 +503,8 @@
 </footer>
 
 
-<!-- =========================================
-     JAVASCRIPT
-========================================= -->
-
-<script>
-
-    let currentSlide = 0;
-
-
-    const slides =
-        document.querySelectorAll(".slide");
-
-
-    const dots =
-        document.querySelectorAll(".dot");
-
-
-    function showSlide(index) {
-
-        if (index >= slides.length) {
-
-            currentSlide = 0;
-
-        }
-        else if (index < 0) {
-
-            currentSlide =
-                slides.length - 1;
-
-        }
-        else {
-
-            currentSlide = index;
-
-        }
-
-
-        slides.forEach(slide => {
-
-            slide.classList.remove("active");
-
-        });
-
-
-        dots.forEach(dot => {
-
-            dot.classList.remove("active");
-
-        });
-
-
-        slides[currentSlide]
-            .classList.add("active");
-
-
-        dots[currentSlide]
-            .classList.add("active");
-
-    }
-
-
-    function changeSlide(direction) {
-
-        showSlide(
-            currentSlide + direction
-        );
-
-    }
-
-
-    function goToSlide(index) {
-
-        showSlide(index);
-
-    }
-
-
-    /*
-        Cambio automático
-        cada 5 segundos
-    */
-
-    setInterval(() => {
-
-        changeSlide(1);
-
-    }, 5000);
-
-</script>
-
+<script src="js/app.js"></script>
 
 </body>
 
 </html>
-
