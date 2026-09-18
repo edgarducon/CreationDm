@@ -90,6 +90,66 @@ nav {
         center;
 }
 
+/* =================================
+   IDENTIDAD / LOGO
+================================= */
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+.brand img {
+
+    height: 55px;
+
+    width: auto;
+
+    display: block;
+}
+
+
+.brand-name {
+
+    color: var(--white);
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    white-space: nowrap;
+}
+
+
+.brand-name::first-line {
+
+    color: var(--white);
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media(max-width:700px) {
+
+    .brand img {
+        height: 45px;
+    }
+
+    .brand-name {
+        font-size: 14px;
+    }
+
+}
+
 
 .logo img {
 
